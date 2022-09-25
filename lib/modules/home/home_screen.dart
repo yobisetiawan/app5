@@ -11,11 +11,13 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const YbText(Lang.home),
       ),
-      body: Container(
+      body: ListView(
         padding: const EdgeInsets.all(20.0),
-        child: const YbText(
-          Lang.hallo,
-        ),
+        children: const [
+          YbText(
+            Lang.hallo,
+          )
+        ],
       ),
     );
   }

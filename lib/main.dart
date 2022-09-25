@@ -1,6 +1,9 @@
 import 'package:app5/app.dart';
+import 'package:app5/providers/language_provider.dart';
+import 'package:app5/providers/theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
 void main() async {
@@ -9,6 +12,10 @@ void main() async {
 
   //storage init
   await GetStorage.init();
+
+  //init providers
+  Get.put(LanguageProvider());
+  Get.put(ThemeProvider());
 
   //prevent device orientation changes and force portrait?
   await SystemChrome.setPreferredOrientations(
