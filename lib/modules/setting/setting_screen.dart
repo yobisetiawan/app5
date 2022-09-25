@@ -18,16 +18,16 @@ class SettingScreen extends StatelessWidget {
         children: [
           ListTile(
             onTap: () {
-              Get.toNamed(RoutesNames.settingTheme);
+              Get.toNamed(RoutesNames.settingLanguage);
             },
-            title: const YbText(Lang.theme),
+            title: const YbText(Lang.languages),
             trailing: const Icon(Icons.arrow_forward_ios),
           ),
           ListTile(
             onTap: () {
-              Get.toNamed(RoutesNames.settingLanguage);
+              Get.toNamed(RoutesNames.settingTheme);
             },
-            title: const YbText(Lang.languages),
+            title: const YbText(Lang.theme),
             trailing: const Icon(Icons.arrow_forward_ios),
           ),
           ListTile(

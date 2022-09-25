@@ -12,9 +12,17 @@ class ThemeItem {
   ThemeItem(this.code, this.brightness, this.label);
 }
 
+class FontItem {
+  String code;
+  String label;
+  FontItem(this.code, this.label);
+}
+
 class ThemeProvider extends GetxController {
   final Rx<ThemeItem?> themeItem = RxNullable<ThemeItem?>().setNull();
+  final Rx<FontItem?> fontItem = RxNullable<FontItem?>().setNull();
   var list = <ThemeItem?>[].obs;
+  var listFonts = <FontItem?>[].obs;
 
   final box = GetStorage();
 
@@ -28,6 +36,9 @@ class ThemeProvider extends GetxController {
   setuplist() {
     list.add(ThemeItem('dark', Brightness.dark, 'Dark'));
     list.add(ThemeItem('light', Brightness.light, 'Light'));
+
+    listFonts.add(FontItem('montserrat', 'Montserrat Font'));
+    listFonts.add(FontItem('lato', 'Lato Font'));
   }
 
   setupSelected() {
@@ -35,18 +46,36 @@ class ThemeProvider extends GetxController {
         (element) => element?.code == box.read(Storage.theme),
         orElse: () => null);
     if (c == null) {
-      themeItem(list.firstWhere((element) => element?.code == 'dark',
-          orElse: () => null));
+      themeItem(list.firstWhere((element) => element?.code == 'dark'));
     } else {
       themeItem(c);
     }
 
-    Get.changeTheme(buildTheme(themeItem.value!.brightness));
+    setupFontSelected();
   }
 
   selectItem(ThemeItem item) {
     box.write(Storage.theme, item.code);
     setupSelected();
+  }
+
+  setupFontSelected() {
+    var c = listFonts.firstWhere(
+        (element) => element?.code == box.read(Storage.font),
+        orElse: () => null);
+    if (c == null) {
+      fontItem(
+          listFonts.firstWhere((element) => element?.code == 'montserrat'));
+    } else {
+      fontItem(c);
+    }
+
+    Get.changeTheme(buildTheme(themeItem.value!.brightness));
+  }
+
+  selectFont(FontItem item) {
+    box.write(Storage.font, item.code);
+    setupFontSelected();
   }
 
   ThemeData buildTheme(brightness) {
@@ -57,7 +86,9 @@ class ThemeProvider extends GetxController {
         ));
 
     return baseTheme.copyWith(
-      textTheme: GoogleFonts.montserratTextTheme(baseTheme.textTheme),
+      textTheme: fontItem.value?.code == 'montserrat'
+          ? GoogleFonts.montserratTextTheme(baseTheme.textTheme)
+          : GoogleFonts.latoTextTheme(baseTheme.textTheme),
     );
   }
 }

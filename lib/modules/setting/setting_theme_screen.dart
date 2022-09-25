@@ -14,33 +14,35 @@ class SettingThemeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const YbText(Lang.theme),
       ),
-      body: Obx(() {
-        return Stack(
-          children: [
-            Opacity(
-              opacity: 0,
-              child: YbText(c.themeItem.value?.code ?? ''),
-            ),
-            ListView.builder(
-              padding: const EdgeInsets.only(top: 10.0),
-              itemCount: c.list.length,
-              itemBuilder: (BuildContext context, int index) {
-                var item = c.list[index];
+      body: Obx(
+        () {
+          return Stack(
+            children: [
+              Opacity(
+                opacity: 0,
+                child: YbText(c.themeItem.value?.code ?? ''),
+              ),
+              ListView.builder(
+                padding: const EdgeInsets.only(top: 10.0),
+                itemCount: c.list.length,
+                itemBuilder: (BuildContext context, int index) {
+                  var item = c.list[index];
 
-                return ListTile(
-                  onTap: () {
-                    c.selectItem(item!);
-                  },
-                  title: YbText(item!.label),
-                  trailing: c.themeItem.value?.code == item.code
-                      ? const Icon(Icons.check)
-                      : null,
-                );
-              },
-            ),
-          ],
-        );
-      }),
+                  return ListTile(
+                    onTap: () {
+                      c.selectItem(item!);
+                    },
+                    title: YbText(item!.label),
+                    trailing: c.themeItem.value?.code == item.code
+                        ? const Icon(Icons.check)
+                        : null,
+                  );
+                },
+              ),
+            ],
+          );
+        },
+      ),
     );
   }
 }
