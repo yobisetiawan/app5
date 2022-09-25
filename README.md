@@ -1,6 +1,6 @@
 # app5
 
-A new base Flutter project.
+A new base Flutter v.3.0.5 project.
 
 ## Getting Started
 
