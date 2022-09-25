@@ -1,4 +1,9 @@
 class Lang {
   static const String hallo = "hello";
   static const String setting = 'setting';
+  static const String business = 'business';
+  static const String home = 'home';
+  static const String theme = 'theme';
+  static const String languages = 'languages';
+  static const String fonts = 'fonts';
 }
