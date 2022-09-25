@@ -6,4 +6,7 @@ class Lang {
   static const String theme = 'theme';
   static const String languages = 'languages';
   static const String fonts = 'fonts';
+
+  static const String dark = 'dark';
+  static const String light = 'light';
 }

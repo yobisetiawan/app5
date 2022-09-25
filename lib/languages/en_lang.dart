@@ -7,5 +7,7 @@ const enLang = {
   Lang.home: 'Home',
   Lang.theme: 'Theme',
   Lang.languages: 'Languages',
-  Lang.fonts: 'Fonts'
+  Lang.fonts: 'Fonts',
+  Lang.dark: 'Dark',
+  Lang.light: 'Light',
 };

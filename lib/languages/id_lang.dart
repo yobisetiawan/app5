@@ -7,5 +7,7 @@ const idLang = {
   Lang.home: 'Beranda',
   Lang.theme: 'Tema',
   Lang.languages: 'Bahasa',
-  Lang.fonts: 'Fonts'
+  Lang.fonts: 'Fonts',
+  Lang.dark: 'Gelap',
+  Lang.light: 'Terang',
 };
