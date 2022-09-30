@@ -1,6 +1,6 @@
 import 'package:app5/languages/keys_lang.dart';
-import 'package:app5/modules/business/business_screen.dart';
-import 'package:app5/modules/home/home_screen.dart';
+import 'package:app5/modules/advanced/advanced_screen.dart';
+import 'package:app5/modules/basic/basic_screen.dart'; 
 import 'package:app5/modules/main/main_controller.dart';
 import 'package:app5/modules/setting/setting_screen.dart';
 import 'package:flutter/material.dart';
@@ -15,12 +15,12 @@ class MainScreen extends StatelessWidget {
     return Scaffold(
       body: Obx(() {
         if (c.currentIndex.value == 1) {
-          return const BusinessScreen();
+          return const AdvancedScreen();
         }
         if (c.currentIndex.value == 2) {
           return const SettingScreen();
         }
-        return const HomeScreen();
+        return const BasicScreen();
       }),
       bottomNavigationBar: Obx(
         () => BottomNavigationBar(

@@ -10,4 +10,6 @@ const idLang = {
   Lang.fonts: 'Fonts',
   Lang.dark: 'Gelap',
   Lang.light: 'Terang',
+  Lang.basic: 'Dasar',
+  Lang.advanced: 'Mahir'
 };

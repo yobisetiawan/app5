@@ -10,4 +10,7 @@ const enLang = {
   Lang.fonts: 'Fonts',
   Lang.dark: 'Dark',
   Lang.light: 'Light',
+  Lang.basic: 'Basic',
+  Lang.advanced: 'Advanced'
+  
 };
