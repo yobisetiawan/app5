@@ -27,11 +27,11 @@ class MainScreen extends StatelessWidget {
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: const Icon(Icons.home),
-              label: Lang.home.tr,
+              label: Lang.basic.tr,
             ),
             BottomNavigationBarItem(
               icon: const Icon(Icons.business),
-              label: Lang.business.tr,
+              label: Lang.advanced.tr,
             ),
             BottomNavigationBarItem(
               icon: const Icon(Icons.settings),

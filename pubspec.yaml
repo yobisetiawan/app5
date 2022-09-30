@@ -38,6 +38,7 @@ dependencies:
   get_storage: ^2.0.3
   google_fonts: ^3.0.1
   flutter_launcher_icons: ^0.10.0
+  flutter_native_splash: ^2.2.9
 
 dev_dependencies:
   flutter_test:
