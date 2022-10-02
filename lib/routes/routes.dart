@@ -1,3 +1,4 @@
+import 'package:app5/modules/basic/avatar/avatar_widget_screen.dart';
 import 'package:app5/modules/basic/button/btn_widget_screen.dart';
 import 'package:app5/modules/basic/form/form_widget_screen.dart';
 import 'package:app5/modules/basic/text/text_widget_screen.dart';
@@ -24,5 +25,7 @@ class Routes {
         name: RoutesNames.widgetButton, page: () => const ButtonWidgetScreen()),
     GetPage(name: RoutesNames.widgetWindow, page: () => const WindowScreen()),
     GetPage(name: RoutesNames.widgetForm, page: () => const FormWidgetScreen()),
+    GetPage(
+        name: RoutesNames.widgetAvatar, page: () => const AvatarWidgetScreen()),
   ];
 }

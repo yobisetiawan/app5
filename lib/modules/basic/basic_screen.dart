@@ -11,6 +11,7 @@ class BasicScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var listMenu = [
       {'title': 'Text Widget', 'target': RoutesNames.widgetText},
+      {'title': 'Avatar Widget', 'target': RoutesNames.widgetAvatar},
       {'title': 'Button Widget', 'target': RoutesNames.widgetButton},
       {'title': 'Window Widget', 'target': RoutesNames.widgetWindow},
       {'title': 'Form Widget', 'target': RoutesNames.widgetForm},

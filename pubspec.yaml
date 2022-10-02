@@ -41,6 +41,7 @@ dependencies:
   flutter_native_splash: ^2.2.9
   modal_bottom_sheet: ^2.1.2
   flutter_form_builder: ^7.6.0
+  getwidget: ^3.0.1
   
 
 dev_dependencies:

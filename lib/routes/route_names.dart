@@ -10,4 +10,5 @@ class RoutesNames {
   static const String widgetButton = '/widget-button';
   static const String widgetWindow = '/widget-window';
   static const String widgetForm = '/widget-form';
+  static const String widgetAvatar = '/widget-avatar';
 }

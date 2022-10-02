@@ -232,6 +232,24 @@ class FormWidgetScreen extends StatelessWidget {
                     ),
                   ),
                 ),
+                FormBuilderSegmentedControl(
+                  selectedColor: Colors.blue,
+                  padding: const EdgeInsets.all(1.0),
+                  decoration: const InputDecoration(
+                    labelText: 'Movie Rating (Archer)',
+                  ),
+                  name: 'movie_rating',
+                  options: List.generate(5, (i) => i + 1)
+                      .map((number) => FormBuilderFieldOption(
+                            value: number,
+                            child: Text(
+                              number.toString(),
+                              style:
+                                  const TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                          ))
+                      .toList(),
+                ),
               ],
             ),
           ),
