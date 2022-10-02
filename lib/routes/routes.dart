@@ -12,20 +12,44 @@ import 'package:get/get.dart';
 
 class Routes {
   static final List<GetPage<dynamic>> pages = [
-    GetPage(name: RoutesNames.home, page: () => const MainScreen()),
     GetPage(
-        name: RoutesNames.settingTheme, page: () => const SettingThemeScreen()),
+      name: RoutesNames.home,
+      page: () => const MainScreen(),
+    ),
     GetPage(
-        name: RoutesNames.settingLanguage,
-        page: () => const SettingLanguageScreen()),
+      name: RoutesNames.settingTheme,
+      page: () => const SettingThemeScreen(),
+    ),
     GetPage(
-        name: RoutesNames.settingFont, page: () => const SettingFontScreen()),
-    GetPage(name: RoutesNames.widgetText, page: () => const TextWidgetScreen()),
+      name: RoutesNames.settingLanguage,
+      page: () => const SettingLanguageScreen(),
+    ),
     GetPage(
-        name: RoutesNames.widgetButton, page: () => const ButtonWidgetScreen()),
-    GetPage(name: RoutesNames.widgetWindow, page: () => const WindowScreen()),
-    GetPage(name: RoutesNames.widgetForm, page: () => const FormWidgetScreen()),
+      name: RoutesNames.settingFont,
+      page: () => const SettingFontScreen(),
+    ),
+
+    //basic widgets
     GetPage(
-        name: RoutesNames.widgetAvatar, page: () => const AvatarWidgetScreen()),
+      name: RoutesNames.widgetText,
+      page: () => const TextWidgetScreen(),
+    ),
+    GetPage(
+      name: RoutesNames.widgetButton,
+      page: () => const ButtonWidgetScreen(),
+    ),
+    GetPage(
+      name: RoutesNames.widgetWindow,
+      page: () => const WindowScreen(),
+    ),
+    GetPage(
+      name: RoutesNames.widgetForm,
+      page: () => const FormWidgetScreen(),
+    ),
+    GetPage(
+      name: RoutesNames.widgetAvatar,
+      page: () => const AvatarWidgetScreen(),
+    ),
+    //end basic widgets
   ];
 }
