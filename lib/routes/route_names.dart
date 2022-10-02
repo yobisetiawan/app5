@@ -8,4 +8,6 @@ class RoutesNames {
 
   static const String widgetText = '/widget-text';
   static const String widgetButton = '/widget-button';
+  static const String widgetWindow = '/widget-window';
+  static const String widgetForm = '/widget-form';
 }

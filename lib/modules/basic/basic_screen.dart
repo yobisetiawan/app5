@@ -12,8 +12,8 @@ class BasicScreen extends StatelessWidget {
     var listMenu = [
       {'title': 'Text Widget', 'target': RoutesNames.widgetText},
       {'title': 'Button Widget', 'target': RoutesNames.widgetButton},
-      {'title': 'Window Widget', 'target': RoutesNames.widgetText},
-      {'title': 'Form Widget', 'target': RoutesNames.widgetText},
+      {'title': 'Window Widget', 'target': RoutesNames.widgetWindow},
+      {'title': 'Form Widget', 'target': RoutesNames.widgetForm},
       {'title': 'Slider Widget', 'target': RoutesNames.widgetText},
     ];
     return Scaffold(

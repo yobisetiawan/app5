@@ -1,5 +1,7 @@
 import 'package:app5/modules/basic/button/btn_widget_screen.dart';
+import 'package:app5/modules/basic/form/form_screen.dart';
 import 'package:app5/modules/basic/text/text_widget_screen.dart';
+import 'package:app5/modules/basic/window/window_screen.dart';
 import 'package:app5/modules/main/main_screen.dart';
 import 'package:app5/modules/setting/setting_font_screen.dart';
 import 'package:app5/modules/setting/setting_language_screen.dart';
@@ -20,5 +22,7 @@ class Routes {
     GetPage(name: RoutesNames.widgetText, page: () => const TextWidgetScreen()),
     GetPage(
         name: RoutesNames.widgetButton, page: () => const ButtonWidgetScreen()),
+    GetPage(name: RoutesNames.widgetWindow, page: () => const WindowScreen()),
+    GetPage(name: RoutesNames.widgetForm, page: () => const CompleteFormScreen()),
   ];
 }
