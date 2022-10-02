@@ -1,6 +1,6 @@
+import 'package:app5/components/Avatar/yb_avatar.dart';
 import 'package:app5/components/Text/yb_text.dart';
 import 'package:flutter/material.dart';
-import 'package:getwidget/getwidget.dart';
 
 class AvatarWidgetScreen extends StatelessWidget {
   const AvatarWidgetScreen({Key? key}) : super(key: key);
@@ -16,44 +16,121 @@ class AvatarWidgetScreen extends StatelessWidget {
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
-              GFAvatar(
-                backgroundImage: NetworkImage('https://i.pravatar.cc/300'),
-                size: 150.0,
+            children: [
+              const YbAvatar(
+                backgroundImage: NetworkImage('https://i.pravatar.cc/500'),
+                size: 100,
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(top: 20.0, bottom: 10.0),
                 child: YbText(
                   'Avatar large',
                   type: YbTextType.titleLarge,
                 ),
               ),
-              GFAvatar(
-                backgroundImage: NetworkImage('https://i.pravatar.cc/200'),
-                size: GFSize.LARGE,
+             Wrap(
+                spacing: 10.0,
+                runSpacing: 10.0,
+                direction: Axis.vertical,
+                children: const [
+                  YbAvatar(
+                    backgroundImage: NetworkImage('https://i.pravatar.cc/500'),
+                    size: YbAvatarSize.large,
+                    shape: YbAvatarShape.box,
+                  ),
+                  YbAvatar(
+                    backgroundImage: NetworkImage('https://i.pravatar.cc/500'),
+                    size: YbAvatarSize.large,
+                    shape: YbAvatarShape.box,
+                    roundedSize: YbAvatarRoundedSize.large,
+                  ),
+                  YbAvatar(
+                    backgroundImage: NetworkImage('https://i.pravatar.cc/500'),
+                    size: YbAvatarSize.large,
+                  ),
+                ],
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(top: 20.0, bottom: 10.0),
                 child: YbText(
                   'Avatar Medium',
                   type: YbTextType.titleLarge,
                 ),
               ),
-              GFAvatar(
-                backgroundImage: NetworkImage('https://i.pravatar.cc/400'),
-                size: GFSize.MEDIUM,
+              Wrap(
+                spacing: 10.0,
+                children: const [
+                  YbAvatar(
+                    backgroundImage: NetworkImage('https://i.pravatar.cc/500'),
+                    size: YbAvatarSize.medium,
+                    shape: YbAvatarShape.box,
+                  ),
+                  YbAvatar(
+                    backgroundImage: NetworkImage('https://i.pravatar.cc/500'),
+                    size: YbAvatarSize.medium,
+                    shape: YbAvatarShape.box,
+                    roundedSize: YbAvatarRoundedSize.medium,
+                  ),
+                  YbAvatar(
+                    backgroundImage: NetworkImage('https://i.pravatar.cc/500'),
+                    size: YbAvatarSize.medium,
+                  ),
+                ],
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(top: 20.0, bottom: 10.0),
                 child: YbText(
                   'Avatar Small',
                   type: YbTextType.titleLarge,
                 ),
               ),
-              GFAvatar(
-                backgroundImage: NetworkImage('https://i.pravatar.cc/500'),
-                size: GFSize.SMALL,
+              Wrap(
+                spacing: 10.0,
+                children: const [
+                  YbAvatar(
+                    backgroundImage: NetworkImage('https://i.pravatar.cc/500'),
+                    size: YbAvatarSize.small,
+                    shape: YbAvatarShape.box,
+                  ),
+                  YbAvatar(
+                    backgroundImage: NetworkImage('https://i.pravatar.cc/500'),
+                    size: YbAvatarSize.small,
+                    shape: YbAvatarShape.box,
+                    roundedSize: YbAvatarRoundedSize.small,
+                  ),
+                  YbAvatar(
+                    backgroundImage: NetworkImage('https://i.pravatar.cc/500'),
+                    size: YbAvatarSize.small,
+                  ),
+                ],
               ),
+              const Padding(
+                padding: EdgeInsets.only(top: 20.0, bottom: 10.0),
+                child: YbText(
+                  'Avatar Extra Small',
+                  type: YbTextType.titleLarge,
+                ),
+              ),
+              Wrap(
+                spacing: 10.0,
+                children: const [
+                  YbAvatar(
+                    backgroundImage: NetworkImage('https://i.pravatar.cc/500'),
+                    size: YbAvatarSize.extraSmall,
+                    shape: YbAvatarShape.box,
+                  ),
+                  YbAvatar(
+                    backgroundImage: NetworkImage('https://i.pravatar.cc/500'),
+                    size: YbAvatarSize.extraSmall,
+                    shape: YbAvatarShape.box,
+                    roundedSize: YbAvatarRoundedSize.extraSmall,
+                  ),
+                  YbAvatar(
+                    backgroundImage: NetworkImage('https://i.pravatar.cc/500'),
+                    size: YbAvatarSize.extraSmall,
+                  ),
+                ],
+              )
             ],
           ),
           const SizedBox(
