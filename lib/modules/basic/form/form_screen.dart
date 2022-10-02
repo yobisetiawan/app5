@@ -240,23 +240,18 @@ class _CompleteFormState extends State<CompleteFormScreen> {
                       options: const [
                         FormBuilderChipOption(
                           value: 'Dart',
-                          avatar: CircleAvatar(child: Text('D')),
                         ),
                         FormBuilderChipOption(
                           value: 'Kotlin',
-                          avatar: CircleAvatar(child: Text('K')),
                         ),
                         FormBuilderChipOption(
                           value: 'Java',
-                          avatar: CircleAvatar(child: Text('J')),
                         ),
                         FormBuilderChipOption(
                           value: 'Swift',
-                          avatar: CircleAvatar(child: Text('S')),
                         ),
                         FormBuilderChipOption(
                           value: 'Objective-C',
-                          avatar: CircleAvatar(child: Text('O')),
                         ),
                       ],
                       onChanged: _onChanged,
