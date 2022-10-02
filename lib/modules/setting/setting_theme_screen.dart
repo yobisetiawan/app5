@@ -22,7 +22,7 @@ class SettingThemeScreen extends StatelessWidget {
                 opacity: 0,
                 child: YbText(c.themeItem.value?.code ?? ''),
               ),
-              ListView.builder(
+              ListView.separated(
                 padding: const EdgeInsets.only(top: 10.0),
                 itemCount: c.list.length,
                 itemBuilder: (BuildContext context, int index) {
@@ -38,6 +38,7 @@ class SettingThemeScreen extends StatelessWidget {
                         : null,
                   );
                 },
+                separatorBuilder: (context, index) => const Divider(),
               ),
             ],
           );

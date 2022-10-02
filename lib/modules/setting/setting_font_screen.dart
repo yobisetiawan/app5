@@ -22,7 +22,7 @@ class SettingFontScreen extends StatelessWidget {
                 opacity: 0,
                 child: YbText(c.fontItem.value?.code ?? 'no value'),
               ),
-              ListView.builder(
+              ListView.separated(
                 padding: const EdgeInsets.only(top: 10.0),
                 itemCount: c.listFonts.length,
                 itemBuilder: (BuildContext context, int index) {
@@ -38,6 +38,7 @@ class SettingFontScreen extends StatelessWidget {
                         : null,
                   );
                 },
+                separatorBuilder: ((context, index) => const Divider()),
               ),
             ],
           );

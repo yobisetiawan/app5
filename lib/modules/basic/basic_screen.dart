@@ -20,7 +20,7 @@ class BasicScreen extends StatelessWidget {
       appBar: AppBar(
         title: const YbText(Lang.basic),
       ),
-      body: ListView.builder(
+      body: ListView.separated(
         padding: const EdgeInsets.only(top: 10.0),
         itemBuilder: (context, index) {
           return ListTile(
@@ -34,6 +34,9 @@ class BasicScreen extends StatelessWidget {
           );
         },
         itemCount: listMenu.length,
+        separatorBuilder: (context, index) {
+          return const Divider();
+        },
       ),
     );
   }

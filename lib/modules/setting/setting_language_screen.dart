@@ -14,7 +14,7 @@ class SettingLanguageScreen extends StatelessWidget {
       appBar: AppBar(
         title: const YbText(Lang.languages),
       ),
-      body: ListView.builder(
+      body: ListView.separated(
         padding: const EdgeInsets.only(top: 10.0),
         itemCount: c.list.length,
         itemBuilder: (BuildContext context, int index) {
@@ -28,6 +28,9 @@ class SettingLanguageScreen extends StatelessWidget {
                 ? const Icon(Icons.check)
                 : null,
           );
+        },
+        separatorBuilder: (context, index) {
+          return const Divider();
         },
       ),
     );

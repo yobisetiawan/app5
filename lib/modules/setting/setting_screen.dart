@@ -15,29 +15,32 @@ class SettingScreen extends StatelessWidget {
       ),
       body: ListView(
         padding: const EdgeInsets.only(top: 10.0),
-        children: [
-          ListTile(
-            onTap: () {
-              Get.toNamed(RoutesNames.settingLanguage);
-            },
-            title: const YbText(Lang.languages),
-            trailing: const Icon(Icons.arrow_forward_ios),
-          ),
-          ListTile(
-            onTap: () {
-              Get.toNamed(RoutesNames.settingTheme);
-            },
-            title: const YbText(Lang.theme),
-            trailing: const Icon(Icons.arrow_forward_ios),
-          ),
-          ListTile(
-            onTap: () {
-              Get.toNamed(RoutesNames.settingFont);
-            },
-            title: const YbText(Lang.fonts),
-            trailing: const Icon(Icons.arrow_forward_ios),
-          )
-        ],
+        children: ListTile.divideTiles(
+          context: context,
+          tiles: <Widget>[
+            ListTile(
+              onTap: () {
+                Get.toNamed(RoutesNames.settingLanguage);
+              },
+              title: const YbText(Lang.languages),
+              trailing: const Icon(Icons.arrow_forward_ios),
+            ),
+            ListTile(
+              onTap: () {
+                Get.toNamed(RoutesNames.settingTheme);
+              },
+              title: const YbText(Lang.theme),
+              trailing: const Icon(Icons.arrow_forward_ios),
+            ),
+            ListTile(
+              onTap: () {
+                Get.toNamed(RoutesNames.settingFont);
+              },
+              title: const YbText(Lang.fonts),
+              trailing: const Icon(Icons.arrow_forward_ios),
+            )
+          ],
+        ).toList(),
       ),
     );
   }
