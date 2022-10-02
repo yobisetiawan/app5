@@ -33,7 +33,6 @@ class _CompleteFormState extends State<CompleteFormScreen> {
             children: <Widget>[
               FormBuilder(
                 key: _formKey,
-                // enabled: false,
                 onChanged: () {
                   _formKey.currentState!.save();
                   debugPrint(_formKey.currentState!.value.toString());
@@ -66,13 +65,11 @@ class _CompleteFormState extends State<CompleteFormScreen> {
                         ),
                       ),
                       initialTime: const TimeOfDay(hour: 8, minute: 0),
-                      // locale: const Locale.fromSubtags(languageCode: 'fr'),
                     ),
                     FormBuilderDateRangePicker(
                       name: 'date_range',
                       firstDate: DateTime(1970),
                       lastDate: DateTime(2030),
-                      //format: DateFormat('yyyy-MM-dd'),
                       onChanged: _onChanged,
                       decoration: InputDecoration(
                         labelText: 'Date Range',
@@ -89,9 +86,6 @@ class _CompleteFormState extends State<CompleteFormScreen> {
                     ),
                     FormBuilderSlider(
                       name: 'slider',
-                      // validator: FormBuilderValidators.compose([
-                      //   FormBuilderValidators.min(6),
-                      // ]),
                       onChanged: _onChanged,
                       min: 0.0,
                       max: 10.0,
@@ -105,7 +99,6 @@ class _CompleteFormState extends State<CompleteFormScreen> {
                     ),
                     FormBuilderRangeSlider(
                       name: 'range_slider',
-                      // validator: FormBuilderValidators.compose([FormBuilderValidators.min(context, 6)]),
                       onChanged: _onChanged,
                       min: 0.0,
                       max: 100.0,
@@ -125,28 +118,14 @@ class _CompleteFormState extends State<CompleteFormScreen> {
                           children: [
                             TextSpan(
                               text: 'I have read and agree to the ',
-                              style: TextStyle(color: Colors.black),
                             ),
                             TextSpan(
                               text: 'Terms and Conditions',
                               style: TextStyle(color: Colors.blue),
-                              // Flutter doesn't allow a button inside a button
-                              // https://github.com/flutter/flutter/issues/31437#issuecomment-492411086
-                              /*
-                              recognizer: TapGestureRecognizer()
-                                ..onTap = () {
-                                  print('launch url');
-                                },
-                              */
                             ),
                           ],
                         ),
                       ),
-                      // validator: FormBuilderValidators.equal(
-                      //   true,
-                      //   errorText:
-                      //       'You must accept terms and conditions to continue',
-                      // ),
                     ),
                     FormBuilderTextField(
                       autovalidateMode: AutovalidateMode.always,
@@ -164,18 +143,10 @@ class _CompleteFormState extends State<CompleteFormScreen> {
                               false);
                         });
                       },
-                      // valueTransformer: (text) => num.tryParse(text),
-                      // validator: FormBuilderValidators.compose([
-                      //   FormBuilderValidators.required(),
-                      //   FormBuilderValidators.numeric(),
-                      //   FormBuilderValidators.max(70),
-                      // ]),
-                      // initialValue: '12',
                       keyboardType: TextInputType.number,
                       textInputAction: TextInputAction.next,
                     ),
                     FormBuilderDropdown<String>(
-                      // autovalidate: true,
                       name: 'gender',
                       decoration: InputDecoration(
                         labelText: 'Gender',
@@ -184,8 +155,6 @@ class _CompleteFormState extends State<CompleteFormScreen> {
                             : const Icon(Icons.check),
                         hintText: 'Select Gender',
                       ),
-                      // validator: FormBuilderValidators.compose(
-                      //     [FormBuilderValidators.required()]),
                       items: genderOptions
                           .map((gender) => DropdownMenuItem(
                                 alignment: AlignmentDirectional.center,
@@ -210,8 +179,6 @@ class _CompleteFormState extends State<CompleteFormScreen> {
                       initialValue: null,
                       name: 'best_language',
                       onChanged: _onChanged,
-                      // validator: FormBuilderValidators.compose(
-                      //     [FormBuilderValidators.required()]),
                       options:
                           ['Dart', 'Kotlin', 'Java', 'Swift', 'Objective-C']
                               .map((lang) => FormBuilderFieldOption(
@@ -226,8 +193,6 @@ class _CompleteFormState extends State<CompleteFormScreen> {
                         labelText: 'Movie Rating (Archer)',
                       ),
                       name: 'movie_rating',
-                      // initialValue: 1,
-                      // textStyle: TextStyle(fontWeight: FontWeight.bold),
                       options: List.generate(5, (i) => i + 1)
                           .map((number) => FormBuilderFieldOption(
                                 value: number,
@@ -265,10 +230,6 @@ class _CompleteFormState extends State<CompleteFormScreen> {
                         thickness: 5,
                         color: Colors.red,
                       ),
-                      // validator: FormBuilderValidators.compose([
-                      //   FormBuilderValidators.minLength(1),
-                      //   FormBuilderValidators.maxLength(3),
-                      // ]),
                     ),
                     FormBuilderFilterChip<String>(
                       autovalidateMode: AutovalidateMode.onUserInteraction,
@@ -299,10 +260,6 @@ class _CompleteFormState extends State<CompleteFormScreen> {
                         ),
                       ],
                       onChanged: _onChanged,
-                      // validator: FormBuilderValidators.compose([
-                      //   FormBuilderValidators.minLength(1),
-                      //   FormBuilderValidators.maxLength(3),
-                      // ]),
                     ),
                     FormBuilderChoiceChip<String>(
                       autovalidateMode: AutovalidateMode.onUserInteraction,
