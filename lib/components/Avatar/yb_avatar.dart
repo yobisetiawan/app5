@@ -13,11 +13,11 @@ class YbAvatarSize {
 class YbAvatarRoundedSize {
   static const double extraSmall = 6;
 
-  static const double small = 12;
+  static const double small = 8;
 
-  static const double medium = 24;
+  static const double medium = 14;
 
-  static const double large = 38;
+  static const double large = 18;
 }
 
 enum YbAvatarShape { circle, box }

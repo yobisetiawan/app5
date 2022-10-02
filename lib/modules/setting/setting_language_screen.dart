@@ -25,7 +25,10 @@ class SettingLanguageScreen extends StatelessWidget {
             },
             title: YbText(item!.label),
             trailing: c.locale.value.countryCode == item.country
-                ? const Icon(Icons.check)
+                ? const Icon(
+                    Icons.check,
+                    size: 15.0,
+                  )
                 : null,
           );
         },

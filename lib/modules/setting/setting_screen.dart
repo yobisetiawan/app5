@@ -23,21 +23,30 @@ class SettingScreen extends StatelessWidget {
                 Get.toNamed(RoutesNames.settingLanguage);
               },
               title: const YbText(Lang.languages),
-              trailing: const Icon(Icons.arrow_forward_ios),
+              trailing: const Icon(
+                Icons.arrow_forward_ios,
+                size: 15.0,
+              ),
             ),
             ListTile(
               onTap: () {
                 Get.toNamed(RoutesNames.settingTheme);
               },
               title: const YbText(Lang.theme),
-              trailing: const Icon(Icons.arrow_forward_ios),
+              trailing: const Icon(
+                Icons.arrow_forward_ios,
+                size: 15.0,
+              ),
             ),
             ListTile(
               onTap: () {
                 Get.toNamed(RoutesNames.settingFont);
               },
               title: const YbText(Lang.fonts),
-              trailing: const Icon(Icons.arrow_forward_ios),
+              trailing: const Icon(
+                Icons.arrow_forward_ios,
+                size: 15.0,
+              ),
             )
           ],
         ).toList(),

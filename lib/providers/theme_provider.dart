@@ -40,6 +40,8 @@ class ThemeProvider extends GetxController {
 
     listFonts.add(FontItem('montserrat', 'Montserrat Font'));
     listFonts.add(FontItem('lato', 'Lato Font'));
+    listFonts.add(FontItem('inter', 'Inter Font'));
+    listFonts.add(FontItem('padauk', 'Padauk Font'));
   }
 
   setupSelected() {
@@ -81,15 +83,28 @@ class ThemeProvider extends GetxController {
 
   ThemeData buildTheme(brightness) {
     var baseTheme = ThemeData(
-        brightness: brightness,
-        appBarTheme: const AppBarTheme(
-          elevation: 0,
-        ));
+      brightness: brightness,
+      appBarTheme: const AppBarTheme(
+        elevation: 0,
+      ),
+    );
+
+    var font = GoogleFonts.latoTextTheme(baseTheme.textTheme);
+
+    if (fontItem.value?.code == 'montserrat') {
+      font = GoogleFonts.montserratTextTheme(baseTheme.textTheme);
+    }
+
+    if (fontItem.value?.code == 'inter') {
+      font = GoogleFonts.interTextTheme(baseTheme.textTheme);
+    }
+
+    if (fontItem.value?.code == 'padauk') {
+      font = GoogleFonts.padaukTextTheme(baseTheme.textTheme);
+    }
 
     return baseTheme.copyWith(
-      textTheme: fontItem.value?.code == 'montserrat'
-          ? GoogleFonts.montserratTextTheme(baseTheme.textTheme)
-          : GoogleFonts.latoTextTheme(baseTheme.textTheme),
+      textTheme: font,
     );
   }
 }

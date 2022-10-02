@@ -15,7 +15,7 @@ class BasicScreen extends StatelessWidget {
       {'title': 'Button Widget', 'target': RoutesNames.widgetButton},
       {'title': 'Window Widget', 'target': RoutesNames.widgetWindow},
       {'title': 'Form Widget', 'target': RoutesNames.widgetForm},
-      {'title': 'Slider Widget', 'target': RoutesNames.widgetText},
+      {'title': 'Card Widget', 'target': RoutesNames.widgetText},
     ];
     return Scaffold(
       appBar: AppBar(
@@ -31,7 +31,10 @@ class BasicScreen extends StatelessWidget {
             title: YbText(
               listMenu[index]['title'] ?? '',
             ),
-            trailing: const Icon(Icons.arrow_forward_ios),
+            trailing: const Icon(
+              Icons.arrow_forward_ios,
+              size: 15.0,
+            ),
           );
         },
         itemCount: listMenu.length,

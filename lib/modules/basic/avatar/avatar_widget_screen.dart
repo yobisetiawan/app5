@@ -28,7 +28,7 @@ class AvatarWidgetScreen extends StatelessWidget {
                   type: YbTextType.titleLarge,
                 ),
               ),
-             Wrap(
+              Wrap(
                 spacing: 10.0,
                 runSpacing: 10.0,
                 direction: Axis.vertical,
@@ -130,7 +130,7 @@ class AvatarWidgetScreen extends StatelessWidget {
                     size: YbAvatarSize.extraSmall,
                   ),
                 ],
-              )
+              ),
             ],
           ),
           const SizedBox(

@@ -34,7 +34,10 @@ class SettingFontScreen extends StatelessWidget {
                     },
                     title: YbText(item!.label),
                     trailing: c.fontItem.value?.code == item.code
-                        ? const Icon(Icons.check)
+                        ? const Icon(
+                            Icons.check,
+                            size: 15.0,
+                          )
                         : null,
                   );
                 },
