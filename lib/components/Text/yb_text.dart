@@ -42,7 +42,7 @@ class YbText extends StatelessWidget {
     }
 
     if (type == YbTextType.body) {
-      return TextStyles(context).getBodyStyle();
+      return TextStyles(context).getBodyStyle().copyWith();
     }
 
     return const TextStyle();
