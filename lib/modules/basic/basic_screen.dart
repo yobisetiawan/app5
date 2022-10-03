@@ -17,15 +17,17 @@ class BasicScreen extends StatelessWidget {
       {'title': 'Form Widget', 'target': RoutesNames.widgetForm},
       {'title': 'PinCode Widget', 'target': RoutesNames.widgetPinCode},
       {'title': 'CountDown Widget', 'target': RoutesNames.widgetCountDown},
-      {'title': 'Card Widget', 'target': RoutesNames.widgetText},
+      {'title': 'Card Widget', 'target': RoutesNames.widgetCard},
       {'title': 'AppBar Widget', 'target': RoutesNames.widgetText},
+      {'title': 'Header Widget', 'target': RoutesNames.widgetText},
+      {'title': 'Tab Widget', 'target': RoutesNames.widgetText},
     ];
     return Scaffold(
       appBar: AppBar(
         title: const YbText(Lang.basic),
       ),
       body: ListView.separated(
-        padding: const EdgeInsets.only(top: 10.0),
+        //  padding: const EdgeInsets.only(top: 10.0),
         itemBuilder: (context, index) {
           return ListTile(
             onTap: () {
@@ -33,16 +35,19 @@ class BasicScreen extends StatelessWidget {
             },
             title: YbText(
               listMenu[index]['title'] ?? '',
+              type: YbTextType.body,
             ),
             trailing: const Icon(
               Icons.arrow_forward_ios,
-              size: 15.0,
+              size: 11.0,
             ),
           );
         },
         itemCount: listMenu.length,
         separatorBuilder: (context, index) {
-          return const Divider();
+          return const Divider(
+            height: 0,
+          );
         },
       ),
     );

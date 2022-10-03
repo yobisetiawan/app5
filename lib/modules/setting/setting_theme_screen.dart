@@ -23,7 +23,7 @@ class SettingThemeScreen extends StatelessWidget {
                 child: YbText(c.themeItem.value?.code ?? ''),
               ),
               ListView.separated(
-                padding: const EdgeInsets.only(top: 10.0),
+             //   padding: const EdgeInsets.only(top: 10.0),
                 itemCount: c.list.length,
                 itemBuilder: (BuildContext context, int index) {
                   var item = c.list[index];
@@ -32,16 +32,21 @@ class SettingThemeScreen extends StatelessWidget {
                     onTap: () {
                       c.selectItem(item!);
                     },
-                    title: YbText(item!.label),
+                    title: YbText(
+                      item!.label,
+                      type: YbTextType.body,
+                    ),
                     trailing: c.themeItem.value?.code == item.code
                         ? const Icon(
                             Icons.check,
-                            size: 15.0,
+                            size: 14.0,
                           )
                         : null,
                   );
                 },
-                separatorBuilder: (context, index) => const Divider(),
+                separatorBuilder: (context, index) => const Divider(
+                  height: 0,
+                ),
               ),
             ],
           );

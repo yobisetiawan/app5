@@ -35,7 +35,8 @@ class ModalFit extends StatelessWidget {
             title: const Text('Delete'),
             leading: const Icon(Icons.delete),
             onTap: () => Navigator.of(context).pop(),
-          )
+          ),
+          
         ],
       ),
     ));

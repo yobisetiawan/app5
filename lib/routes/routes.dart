@@ -1,5 +1,7 @@
 import 'package:app5/modules/basic/avatar/avatar_widget_screen.dart';
 import 'package:app5/modules/basic/button/btn_widget_screen.dart';
+import 'package:app5/modules/basic/card/card_screen.dart';
+import 'package:app5/modules/basic/card/cards/card01_screen.dart';
 import 'package:app5/modules/basic/count_down/count_down_screen.dart';
 import 'package:app5/modules/basic/form/form_widget_screen.dart';
 import 'package:app5/modules/basic/pin_code/pin_code.dart';
@@ -59,6 +61,14 @@ class Routes {
     GetPage(
       name: RoutesNames.widgetCountDown,
       page: () => const CountDownScreen(),
+    ),
+    GetPage(
+      name: RoutesNames.widgetCard,
+      page: () => const CardScreen(),
+    ),
+    GetPage(
+      name: RoutesNames.widgetCard01,
+      page: () => const Card01Screen(),
     ),
     //end basic widgets
   ];

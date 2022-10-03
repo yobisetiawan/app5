@@ -14,7 +14,7 @@ class SettingScreen extends StatelessWidget {
         title: const YbText(Lang.setting),
       ),
       body: ListView(
-        padding: const EdgeInsets.only(top: 10.0),
+       // padding: const EdgeInsets.only(top: 10.0),
         children: ListTile.divideTiles(
           context: context,
           tiles: <Widget>[
@@ -25,7 +25,7 @@ class SettingScreen extends StatelessWidget {
               title: const YbText(Lang.languages),
               trailing: const Icon(
                 Icons.arrow_forward_ios,
-                size: 15.0,
+                size: 11.0,
               ),
             ),
             ListTile(
@@ -35,7 +35,7 @@ class SettingScreen extends StatelessWidget {
               title: const YbText(Lang.theme),
               trailing: const Icon(
                 Icons.arrow_forward_ios,
-                size: 15.0,
+                size: 11.0,
               ),
             ),
             ListTile(
@@ -45,7 +45,7 @@ class SettingScreen extends StatelessWidget {
               title: const YbText(Lang.fonts),
               trailing: const Icon(
                 Icons.arrow_forward_ios,
-                size: 15.0,
+                size: 11.0,
               ),
             )
           ],

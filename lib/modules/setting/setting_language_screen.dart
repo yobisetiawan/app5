@@ -15,7 +15,7 @@ class SettingLanguageScreen extends StatelessWidget {
         title: const YbText(Lang.languages),
       ),
       body: ListView.separated(
-        padding: const EdgeInsets.only(top: 10.0),
+        //padding: const EdgeInsets.only(top: 10.0),
         itemCount: c.list.length,
         itemBuilder: (BuildContext context, int index) {
           var item = c.list[index];
@@ -23,17 +23,22 @@ class SettingLanguageScreen extends StatelessWidget {
             onTap: () {
               c.selectItem(item!);
             },
-            title: YbText(item!.label),
+            title: YbText(
+              item!.label,
+              type: YbTextType.body,
+            ),
             trailing: c.locale.value.countryCode == item.country
                 ? const Icon(
                     Icons.check,
-                    size: 15.0,
+                     size: 14.0,
                   )
                 : null,
           );
         },
         separatorBuilder: (context, index) {
-          return const Divider();
+          return const Divider(
+            height: 0,
+          );
         },
       ),
     );

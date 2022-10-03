@@ -23,7 +23,7 @@ class SettingFontScreen extends StatelessWidget {
                 child: YbText(c.fontItem.value?.code ?? 'no value'),
               ),
               ListView.separated(
-                padding: const EdgeInsets.only(top: 10.0),
+              //  padding: const EdgeInsets.only(top: 10.0),
                 itemCount: c.listFonts.length,
                 itemBuilder: (BuildContext context, int index) {
                   var item = c.listFonts[index];
@@ -32,16 +32,21 @@ class SettingFontScreen extends StatelessWidget {
                     onTap: () {
                       c.selectFont(item!);
                     },
-                    title: YbText(item!.label),
+                    title: YbText(
+                      item!.label,
+                      type: YbTextType.body,
+                    ),
                     trailing: c.fontItem.value?.code == item.code
                         ? const Icon(
                             Icons.check,
-                            size: 15.0,
+                            size: 14.0,
                           )
                         : null,
                   );
                 },
-                separatorBuilder: ((context, index) => const Divider()),
+                separatorBuilder: ((context, index) => const Divider(
+                      height: 0,
+                    )),
               ),
             ],
           );
