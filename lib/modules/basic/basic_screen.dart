@@ -15,9 +15,10 @@ class BasicScreen extends StatelessWidget {
       {'title': 'Button Widget', 'target': RoutesNames.widgetButton},
       {'title': 'Window Widget', 'target': RoutesNames.widgetWindow},
       {'title': 'Form Widget', 'target': RoutesNames.widgetForm},
-      {'title': 'PinCode Widget', 'target': RoutesNames.widgetText},
+      {'title': 'PinCode Widget', 'target': RoutesNames.widgetPinCode},
       {'title': 'CountDown Widget', 'target': RoutesNames.widgetText},
       {'title': 'Card Widget', 'target': RoutesNames.widgetText},
+      {'title': 'AppBar Widget', 'target': RoutesNames.widgetText},
     ];
     return Scaffold(
       appBar: AppBar(

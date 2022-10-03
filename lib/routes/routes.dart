@@ -1,6 +1,7 @@
 import 'package:app5/modules/basic/avatar/avatar_widget_screen.dart';
 import 'package:app5/modules/basic/button/btn_widget_screen.dart';
 import 'package:app5/modules/basic/form/form_widget_screen.dart';
+import 'package:app5/modules/basic/pin_code/pin_code.dart';
 import 'package:app5/modules/basic/text/text_widget_screen.dart';
 import 'package:app5/modules/basic/window/window_screen.dart';
 import 'package:app5/modules/main/main_screen.dart';
@@ -49,6 +50,10 @@ class Routes {
     GetPage(
       name: RoutesNames.widgetAvatar,
       page: () => const AvatarWidgetScreen(),
+    ),
+     GetPage(
+      name: RoutesNames.widgetPinCode,
+      page: () => const PinCodeVerificationScreen(),
     ),
     //end basic widgets
   ];
