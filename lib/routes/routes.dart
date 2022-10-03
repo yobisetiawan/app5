@@ -1,5 +1,6 @@
 import 'package:app5/modules/basic/avatar/avatar_widget_screen.dart';
 import 'package:app5/modules/basic/button/btn_widget_screen.dart';
+import 'package:app5/modules/basic/count_down/count_down_screen.dart';
 import 'package:app5/modules/basic/form/form_widget_screen.dart';
 import 'package:app5/modules/basic/pin_code/pin_code.dart';
 import 'package:app5/modules/basic/text/text_widget_screen.dart';
@@ -54,6 +55,10 @@ class Routes {
      GetPage(
       name: RoutesNames.widgetPinCode,
       page: () => const PinCodeVerificationScreen(),
+    ),
+    GetPage(
+      name: RoutesNames.widgetCountDown,
+      page: () => const CountDownScreen(),
     ),
     //end basic widgets
   ];
