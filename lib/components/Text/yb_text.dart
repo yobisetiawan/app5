@@ -10,16 +10,18 @@ enum YbTextType {
 }
 
 class YbText extends StatelessWidget {
-  const YbText(this.data, {Key? key, this.style, this.type}) : super(key: key);
+  const YbText(this.data, {Key? key, this.style, this.type, this.textAlign}) : super(key: key);
 
   final String data;
   final TextStyle? style;
   final YbTextType? type;
+  final TextAlign? textAlign;
 
   @override
   Widget build(BuildContext context) {
     return Text(
       data.tr,
+      textAlign: textAlign,
       style: getStyle(context),
     );
   }
@@ -45,6 +47,6 @@ class YbText extends StatelessWidget {
       return TextStyles(context).getBodyStyle().copyWith();
     }
 
-    return const TextStyle();
+    return null;
   }
 }

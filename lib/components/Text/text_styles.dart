@@ -25,7 +25,7 @@ class TextStyles {
 
   TextStyle getSubtitleStyle() {
     return Theme.of(context).textTheme.subtitle1!.copyWith(
-          fontSize: 12,
+          fontSize: 11,
         );
   }
 }
