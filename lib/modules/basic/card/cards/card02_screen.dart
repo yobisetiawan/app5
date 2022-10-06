@@ -14,7 +14,7 @@ class Card02Screen extends StatelessWidget {
         padding: const EdgeInsets.all(10.0),
         children: [
           const YbText(
-            'This is text with title large',
+            'This is text with title large 2',
             type: YbTextType.titleLarge,
           ),
           const SizedBox(
@@ -26,9 +26,10 @@ class Card02Screen extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8.0),
                 image: const DecorationImage(
-                    image: NetworkImage(
-                        'https://images.tokopedia.net/img/cache/1208/NsjrJu/2022/10/5/5f97c4ca-71fc-4dac-af1d-62b802ecfaf2.jpg.webp?ect=3g'),
-                    fit: BoxFit.fill),
+                  image: NetworkImage(
+                      'https://images.tokopedia.net/img/cache/1208/NsjrJu/2022/10/5/5f97c4ca-71fc-4dac-af1d-62b802ecfaf2.jpg.webp?ect=3g'),
+                  fit: BoxFit.fill,
+                ),
               ),
             ),
           )
