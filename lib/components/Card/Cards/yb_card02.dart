@@ -28,6 +28,7 @@ class YbCard02 extends StatelessWidget {
         width: width,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(radius),
+          color: Colors.grey,
           image: DecorationImage(
             image: image,
             fit: BoxFit.fill,
