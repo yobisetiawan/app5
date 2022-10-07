@@ -5,6 +5,9 @@ import 'package:get/get.dart';
 class FormWidgetController extends GetxController {
   var formKey = GlobalKey<FormBuilderState>();
   var genderOptions = ['Male', 'Female', 'Other'];
+ 
+
+  
 
   submitForm() {
     if (formKey.currentState?.saveAndValidate() ?? false) {
@@ -15,7 +18,7 @@ class FormWidgetController extends GetxController {
     }
   }
 
-  resetForm(){
+  resetForm() {
     formKey.currentState?.reset();
   }
 

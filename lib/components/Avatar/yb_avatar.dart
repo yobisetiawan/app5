@@ -43,6 +43,7 @@ class YbAvatar extends StatelessWidget {
         height: (size ?? 0) * 2,
         width: (size ?? 0) * 2,
         decoration: BoxDecoration(
+          color: Colors.grey,
           borderRadius: BorderRadius.circular(roundedSize ?? 0),
           image: DecorationImage(
               image: backgroundImage ??
@@ -53,6 +54,7 @@ class YbAvatar extends StatelessWidget {
     }
     return CircleAvatar(
       radius: size,
+      backgroundColor: Colors.grey,
       backgroundImage: backgroundImage,
     );
   }
