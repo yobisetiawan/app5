@@ -11,7 +11,7 @@ class CardScreen extends StatelessWidget {
     var listMenu = [
       {'title': 'Card 01', 'target': RoutesNames.widgetCard01},
       {'title': 'Card 02', 'target': RoutesNames.widgetCard02},
-      {'title': 'Card 03', 'target': RoutesNames.widgetText},
+      {'title': 'Card 03', 'target': RoutesNames.widgetCard03},
       {'title': 'Card 04', 'target': RoutesNames.widgetText},
       {'title': 'Card 05', 'target': RoutesNames.widgetText},
       {'title': 'Card 06', 'target': RoutesNames.widgetText},

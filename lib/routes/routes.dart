@@ -3,6 +3,7 @@ import 'package:app5/modules/basic/button/btn_widget_screen.dart';
 import 'package:app5/modules/basic/card/card_screen.dart';
 import 'package:app5/modules/basic/card/cards/card01_screen.dart';
 import 'package:app5/modules/basic/card/cards/card02_screen.dart';
+import 'package:app5/modules/basic/card/cards/card03_screen.dart';
 import 'package:app5/modules/basic/count_down/count_down_screen.dart';
 import 'package:app5/modules/basic/form/form_widget_screen.dart';
 import 'package:app5/modules/basic/pin_code/pin_code.dart';
@@ -55,7 +56,7 @@ class Routes {
       name: RoutesNames.widgetAvatar,
       page: () => const AvatarWidgetScreen(),
     ),
-     GetPage(
+    GetPage(
       name: RoutesNames.widgetPinCode,
       page: () => const PinCodeVerificationScreen(),
     ),
@@ -71,9 +72,13 @@ class Routes {
       name: RoutesNames.widgetCard01,
       page: () => const Card01Screen(),
     ),
-      GetPage(
+    GetPage(
       name: RoutesNames.widgetCard02,
       page: () => const Card02Screen(),
+    ),
+    GetPage(
+      name: RoutesNames.widgetCard03,
+      page: () => const Card03Screen(),
     ),
     //end basic widgets
   ];

@@ -10,12 +10,15 @@ enum YbTextType {
 }
 
 class YbText extends StatelessWidget {
-  const YbText(this.data, {Key? key, this.style, this.type, this.textAlign}) : super(key: key);
+  const YbText(this.data,
+      {Key? key, this.style, this.type, this.textAlign, this.maxLines})
+      : super(key: key);
 
   final String data;
   final TextStyle? style;
   final YbTextType? type;
   final TextAlign? textAlign;
+  final int? maxLines;
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +26,8 @@ class YbText extends StatelessWidget {
       data.tr,
       textAlign: textAlign,
       style: getStyle(context),
+      maxLines: maxLines,
+      overflow: maxLines != null ? TextOverflow.ellipsis : null,
     );
   }
 

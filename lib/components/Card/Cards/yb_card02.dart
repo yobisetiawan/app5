@@ -4,6 +4,7 @@ class YbCard02 extends StatelessWidget {
   const YbCard02(
       {Key? key,
       this.elevation,
+      this.onTap,
       this.radius = 8,
       required this.image,
       this.width,
@@ -15,23 +16,27 @@ class YbCard02 extends StatelessWidget {
   final ImageProvider<Object> image;
   final double? height;
   final double? width;
+  final void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: elevation,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(radius),
-      ),
-      child: Container(
-        height: height,
-        width: width,
-        decoration: BoxDecoration(
+    return GestureDetector(
+      onTap: onTap,
+      child: Card(
+        elevation: elevation,
+        shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(radius),
-          color: Colors.grey,
-          image: DecorationImage(
-            image: image,
-            fit: BoxFit.fill,
+        ),
+        child: Container(
+          height: height,
+          width: width,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(radius),
+            color: Colors.grey,
+            image: DecorationImage(
+              image: image,
+              fit: BoxFit.fill,
+            ),
           ),
         ),
       ),

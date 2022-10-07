@@ -14,6 +14,7 @@ class RoutesNames {
   static const String widgetCard = '/widget-card';
   static const String widgetCard01 = '/widget-card-01';
   static const String widgetCard02 = '/widget-card-02';
+  static const String widgetCard03 = '/widget-card-03';
   static const String widgetPinCode = '/widget-pincode';
   static const String widgetCountDown = '/widget-countdown';
 }
